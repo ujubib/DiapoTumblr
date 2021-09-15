@@ -1,0 +1,17 @@
+body {
+    background-color: IndianRed;
+}
+#cadre {
+    height: 100%;
+    width: 100%;
+}
+#affiche {
+    position:absolute;
+    top: 5%;
+    bottom: 5%;
+    left: 0;
+    right: 0;
+    height: 90%;
+    width: auto;
+    margin:auto;
+}
