@@ -1,6 +1,6 @@
 
 function sliding(){
-// récupérer la liste des urls et ranger chaque ligne dans un tableau
+// télécharger le fichier texte des urls (une url par ligne)
     var xmlhttp=new XMLHttpRequest();
     xmlhttp.open("GET","https://raw.githubusercontent.com/ujubib/DiapoTumblr/main/js/liste.txt",true);
     xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
@@ -8,7 +8,8 @@ function sliding(){
     xmlhttp.onreadystatechange=function(){
         if (xmlhttp.readyState==4 && xmlhttp.status==200){
             var imgList=xmlhttp.responseText;
-             imgList=imgList.split("\n");
+// charger chaque ligne comme valeur dans un tableau (*type change*)            
+            imgList=imgList.split("\n");
 // mélanger le tableau
             var j, x, i;
             for (i = imgList.length - 1; i > 0; i--) {
