@@ -16,7 +16,7 @@ la fermeture de Tumbview m'a obligé faire ça...
         <link rel="stylesheet" media="screen" type="text/css" href="css/diaporama.css"/>
         <script type="text/javascript" src="js/diaporama.js"></script>
     </head>
-    <body onload="sliding()">
+    <body onload="initSliding()">
         <div id="cadre">
             <img id="affiche" src=""/>
         </div>
@@ -47,3 +47,50 @@ body {
 ```
 
 ## js
+
+```js
+
+
+function sliding(){
+    var xmlhttp=new XMLHttpRequest();
+    xmlhttp.open("GET","liste.txt",true);
+    xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+    xmlhttp.send();
+    xmlhttp.onreadystatechange=function(){
+        if (xmlhttp.readyState==4 && xmlhttp.status==200){
+            var imgList=xmlhttp.responseText;
+             imgList=imgList.split("\n");
+            
+            var j, x, i;
+            for (i = imgList.length - 1; i > 0; i--) {
+                j = Math.floor(Math.random() * (i + 1));
+                x = imgList[i];
+                imgList[i] = imgList[j];
+                imgList[j] = x;
+            }
+
+            for (let k of imgList) {
+                 setTimeout(() => {
+                    var image = document.getElementById('affiche');
+                    image.src = imgList[k];
+                }, 4000 * k);
+            }
+        }    
+    }        
+}
+
+
+function initSliding{
+    var tablevue = new Array();
+    tablevue[0]="x";
+    sliding (tablevue);
+}
+
+var index = "0";
+do {
+    index = Math.floor(Math.random() * imgList.length);
+} while (vus.includes("index")=true);
+
+
+
+```
