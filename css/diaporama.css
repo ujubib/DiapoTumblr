@@ -31,3 +31,6 @@ a.lienLegende, a.lienLegende:visited {
     text-decoration: none;
     font-style: italic;
 }
+a.lienLegende:hover {
+    color:khaki;
+}

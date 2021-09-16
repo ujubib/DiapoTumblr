@@ -10,6 +10,7 @@ function sliding(){
             var imgList=xmlhttp.responseText;
 // charger chaque ligne comme valeur dans un tableau (*type change*)            
             imgList=imgList.split("\n");
+            console.log(imgList[0],imgList[1],imgList[2]);
 // mélanger le tableau
             var j, x, i;
             for (i = imgList.length - 1; i > 0; i--) {
@@ -18,11 +19,16 @@ function sliding(){
                 imgList[i] = imgList[j];
                 imgList[j] = x;
             }
+            console.log(imgList[0],imgList[1],imgList[2]);
 // Parcourir le tableau pour afficher les images (avec un timeout)
             for (let k in imgList) {
                  setTimeout(() => {
                     var image = document.getElementById('affiche');
                     image.src = imgList[k];
+                    var lien = document.getElementById('viewLink'); 
+                    lien.href = imgList[k];
+                    lien.innerText = imgList[k];
+                    console.log(imgList[k]);
                 }, 4000 * k);
             }
         }    
