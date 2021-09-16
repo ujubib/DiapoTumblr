@@ -49,8 +49,6 @@ body {
 ## js
 
 ```js
-
-
 function sliding(){
     var xmlhttp=new XMLHttpRequest();
     xmlhttp.open("GET","liste.txt",true);
@@ -78,19 +76,5 @@ function sliding(){
         }    
     }        
 }
-
-
-function initSliding{
-    var tablevue = new Array();
-    tablevue[0]="x";
-    sliding (tablevue);
-}
-
-var index = "0";
-do {
-    index = Math.floor(Math.random() * imgList.length);
-} while (vus.includes("index")=true);
-
-
 
 ```

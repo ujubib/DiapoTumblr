@@ -1,14 +1,15 @@
 
 function sliding(){
+// récupérer la liste des urls et ranger chaque ligne dans un tableau
     var xmlhttp=new XMLHttpRequest();
-    xmlhttp.open("GET","liste.txt",true);
+    xmlhttp.open("GET","https://raw.githubusercontent.com/ujubib/DiapoTumblr/main/js/liste.txt",true);
     xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
     xmlhttp.send();
     xmlhttp.onreadystatechange=function(){
         if (xmlhttp.readyState==4 && xmlhttp.status==200){
             var imgList=xmlhttp.responseText;
              imgList=imgList.split("\n");
-            
+// mélanger le tableau
             var j, x, i;
             for (i = imgList.length - 1; i > 0; i--) {
                 j = Math.floor(Math.random() * (i + 1));
@@ -16,8 +17,8 @@ function sliding(){
                 imgList[i] = imgList[j];
                 imgList[j] = x;
             }
-
-            for (let k of imgList) {
+// Parcourir le tableau pour afficher les images (avec un timeout)
+            for (let k in imgList) {
                  setTimeout(() => {
                     var image = document.getElementById('affiche');
                     image.src = imgList[k];
