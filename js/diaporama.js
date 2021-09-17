@@ -28,6 +28,7 @@ function sliding(){
                     var lien = document.getElementById('viewLink'); 
                     lien.href = imgList[k];
                     lien.innerText = imgList[k];
+                    
                     console.log(imgList[k]);
                 }, 4000 * k);
             }
