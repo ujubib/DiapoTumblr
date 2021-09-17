@@ -1,11 +1,13 @@
 # Diaporama de mon Tumblr
 
-la fermeture de Tumbview m'a obligé faire ça...
+la fermeture de Tumbview m'a obligé à faire ça une fois le deuil passé...
 
-## Liste des urls
-`list.txt`
+## Liste des urls des images
+Récupérée via le logiciel xxxxx qui génère un fichier `.txt` avec une url par ligne :
 
-## index.html
+- `list.txt`
+
+## [[index.html]]
 
 ```html
 <!DOCTYPE html>
@@ -32,7 +34,7 @@ la fermeture de Tumbview m'a obligé faire ça...
 </html>
 ```
 
-## css
+## [[css/diaporama.css]]
 
 ```css
 body {
@@ -73,7 +75,7 @@ a.lienLegende:hover {
 }
 ```
 
-## js
+## [[js/diaporama.js]]
 
 ```js
 function sliding(){
