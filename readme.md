@@ -1,13 +1,12 @@
 # Diaporama de mon Tumblr
-
 la fermeture de Tumbview m'a obligé à faire ça une fois le deuil passé...
 
 ## Liste des urls des images
-Récupérée via le logiciel xxxxx qui génère un fichier `.txt` avec une url par ligne :
+Récupérée via le logiciel [TumblThree](https://tumblthreeapp.github.io/TumblThree/) qui génère un fichier `.txt` avec une url par ligne :
 
-- `list.txt`
+- `js/list.txt`
 
-## [[index.html]]
+## index.html
 
 ```html
 <!DOCTYPE html>
@@ -34,7 +33,7 @@ Récupérée via le logiciel xxxxx qui génère un fichier `.txt` avec une url p
 </html>
 ```
 
-## [[css/diaporama.css]]
+## css/diaporama.css
 
 ```css
 body {
@@ -75,7 +74,7 @@ a.lienLegende:hover {
 }
 ```
 
-## [[js/diaporama.js]]
+## js/diaporama.js
 
 ```js
 function sliding(){
@@ -107,12 +106,12 @@ function sliding(){
                     var lien = document.getElementById('viewLink'); 
                     lien.href = imgList[k];
                     lien.innerText = imgList[k];
-                    
+// récupérer la liste des images jouées en temps réel dans la console (f12) ;)                   
                     console.log(imgList[k]);
+// Temps (ms) entre chaque image
                 }, 4000 * k);
             }
         }    
     }        
 }
-
 ```
