@@ -15,22 +15,22 @@ body {
     height: 90%;
     width: auto;
     margin:auto;
-    border: 1em solid #ffcce6;
+    border: 1em solid #ffe6ea;
     border-radius: 1em;
 }
 #legende {
     position:absolute;
     bottom:0;
-    left:5px;
-    color: pink;
+    left:20px;
+    color: #ff99aa;
     font-family: monospace;
     font-size: 0.8em;
 }
 a.lienLegende, a.lienLegende:visited {
-    color: grey;
+    color: #ff3355;
     text-decoration: none;
     font-style: italic;
 }
 a.lienLegende:hover {
-    color:khaki;
+    color:#ffe6ea;
 }
