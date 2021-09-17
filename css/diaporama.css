@@ -1,5 +1,5 @@
 body {
-    background-color: #660033;
+    background-color: #ff6666;
 }
 #cadre {
     position: fixed;
@@ -23,18 +23,18 @@ img {
     position:absolute;
     bottom:0;
     left:20px;
-    color: #ff99aa;
+    color: pink;
     font-family: monospace;
     font-size: 0.8em;
     margin-bottom: 0.4em;
 }
 a.lienLegende, a.lienLegende:visited {
-    color: #ff3355;
+    color: #660033;
     text-decoration: none;
     font-style: italic;
 }
 a.lienLegende:hover {
-    color:#ffe6ea;
+    color:pink ;
 }
 
 
