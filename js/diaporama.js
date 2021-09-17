@@ -31,7 +31,7 @@ function sliding(){
 // récupérer la liste des images jouées en temps réel dans la console (f12) ;)                   
                     console.log(imgList[k]);
 // Temps (ms) entre chaque image
-                }, 4000 * k);
+                }, 5000 * k);
             }
         }    
     }        

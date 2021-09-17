@@ -3,20 +3,21 @@ body {
 }
 #cadre {
     position: fixed;
+    top: 2%;
+    height:94%;
+    left: 2%;
+    width: 96%; 
+}
+/*
+img {
+    border: 1em solid #ffcce6;
+    border-radius: 1em;
+}
+*/
+#affiche {
+    object-fit: contain;
     height: 100%;
     width: 100%;
-}
-#affiche {
-    position:fixed;
-    top: 5%;
-    bottom: 5%;
-    left: 0;
-    right: 0;
-    height: 90%;
-    width: auto;
-    margin:auto;
-    border: 1em solid #ffe6ea;
-    border-radius: 1em;
 }
 #legende {
     position:absolute;
