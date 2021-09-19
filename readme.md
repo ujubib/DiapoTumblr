@@ -24,9 +24,16 @@ Récupérée via le logiciel [TumblThree](https://tumblthreeapp.github.io/TumblT
         <div id="cadre">
             <img id="affiche" src=""/>
         </div>
-    
-        
-        <p id="legende">Images curated on <a class="lienLegende" href="https://sceptique.tumblr.com" target="_blank">Tumblr - La fausse sceptique</a> by <a class="lienLegende" href="https://uju-11ty.netlify.app/" target="_blank">UjuBib</a>. Current image : <a id="viewLink" class="lienLegende" href="" target="_blank"></a></p>
+            
+        <p id="legende">
+            Images curated on 
+            <a class="lienLegende" href="https://sceptique.tumblr.com" target="_blank">
+                La fausse sceptique (Tumblr)
+            </a>
+             by <a class="lienLegende" href="https://uju-11ty.netlify.app/" target="_blank">UjuBib</a>
+             . Current image : 
+             <a id="viewLink" class="lienLegende" href="" target="_blank"></a>
+        </p>
 
     </body>
 
@@ -37,40 +44,36 @@ Récupérée via le logiciel [TumblThree](https://tumblthreeapp.github.io/TumblT
 
 ```css
 body {
-    background-color: #660033;
+    background-color: #ff6666;
 }
 #cadre {
     position: fixed;
-    height: 100%;
-    width: 100%;
+    top: 2%;
+    height:95%;
+    left: 2%;
+    width: 96%; 
 }
 #affiche {
-    position:fixed;
-    top: 5%;
-    bottom: 5%;
-    left: 0;
-    right: 0;
-    height: 90%;
-    width: auto;
-    margin:auto;
-    border: 1em solid #ffcce6;
-    border-radius: 1em;
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
 }
 #legende {
     position:absolute;
     bottom:0;
-    left:5px;
-    color: pink;
+    left:8px;
+    color: #660033;
     font-family: monospace;
     font-size: 0.8em;
+    margin-bottom: 0.4em;
 }
 a.lienLegende, a.lienLegende:visited {
-    color: grey;
+    color: MistyRose;
     text-decoration: none;
     font-style: italic;
 }
 a.lienLegende:hover {
-    color:khaki;
+    color: yellow ;
 }
 ```
 
@@ -86,7 +89,7 @@ function sliding(){
     xmlhttp.onreadystatechange=function(){
         if (xmlhttp.readyState==4 && xmlhttp.status==200){
             var imgList=xmlhttp.responseText;
-// charger chaque ligne comme valeur dans un tableau (*type change*)            
+// charger chaque ligne comme valeur dans un tableau (*type change* string-->array)            
             imgList=imgList.split("\n");
             console.log(imgList[0],imgList[1],imgList[2]);
 // mélanger le tableau
@@ -106,10 +109,10 @@ function sliding(){
                     var lien = document.getElementById('viewLink'); 
                     lien.href = imgList[k];
                     lien.innerText = imgList[k];
-// récupérer la liste des images jouées en temps réel dans la console (f12) ;)                   
+// récupérer la liste des images jouées dans la console du navigateur (f12)                 
                     console.log(imgList[k]);
 // Temps (ms) entre chaque image
-                }, 4000 * k);
+                }, 5000 * k);
             }
         }    
     }        
